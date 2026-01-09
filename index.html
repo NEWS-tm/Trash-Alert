@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Planet, One Chance</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 48px; margin-bottom: 10px; }
+    header p { font-size: 20px; max-width: 800px; margin: 0 auto; }
+    section { padding: 50px 20px; max-width: 1100px; margin: auto; }
+    h2 { color: #27ae60; margin-bottom: 20px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .game {
+      background: linear-gradient(#e0f7ff, #cceee0);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+    }
+    #river {
+      position: relative;
+      background: repeating-linear-gradient(
+        45deg,
+        #4facfe,
+        #4facfe 10px,
+        #00c6ff 10px,
+        #00c6ff 20px
+      );
+      height: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .trash {
+      position: absolute;
+      top: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      cursor: grab;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      user-select: none;
+    }
+    .plastic { background: linear-gradient(#f1c40f, #f39c12); }
+    .paper { background: linear-gradient(#ecf0f1, #bdc3c7); }
+    .metal { background: linear-gradient(#95a5a6, #7f8c8d); color: white; }
+
+    .bins {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .bin {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 160px;
+      min-height: 120px;
+      border: 3px dashed #27ae60;
+    }
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    footer a { color: #2ecc71; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div style="position:fixed;top:10px;right:10px;z-index:999;">
+  <button onclick="setLang('ru')">RU</button>
+  <button onclick="setLang('en')">EN</button>
+</div>
+
+<header>
+  <h1 data-ru="One Planet, One Chance" data-en="One Planet, One Chance">One Planet, One Chance</h1>
+  <p data-ru="Наша планета у нас одна. Загрязнение Земли — глобальная проблема, требующая действий уже сегодня." 
+     data-en="We only have one planet. Pollution is a global problem that requires action today.">
+     Наша планета у нас одна. Загрязнение Земли — глобальная проблема, требующая действий уже сегодня.
+  </p>
+</header>
+
+<section>
+  <h2 data-ru="Проблема загрязнения планеты" data-en="The Problem of Planet Pollution">Проблема загрязнения планеты</h2>
+  <p data-ru="Загрязнение окружающей среды возникает из-за деятельности человека: выбросов заводов, транспорта и неправильного обращения с отходами. Пластик, химические вещества и токсичные газы наносят серьёзный вред природе и здоровью людей." 
+     data-en="Environmental pollution is caused by human activity such as factory emissions, transport, and improper waste management. Plastic, chemicals, and toxic gases seriously harm nature and human health.">
+     Загрязнение окружающей среды возникает из-за деятельности человека: выбросов заводов, транспорта и неправильного обращения с отходами. Пластик, химические вещества и токсичные газы наносят серьёзный вред природе и здоровью людей.
+  </p>
+</section>
+
+<section>
+  <h2>Факты и примеры</h2>
+  <ul>
+    <li>Более 8 миллионов тонн пластика ежегодно попадает в океаны.</li>
+    <li>Загрязнение воздуха становится причиной миллионов преждевременных смертей в год.</li>
+    <li>Если не менять ситуацию, к 2050 году пластика в океане может быть больше, чем рыбы.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Что будет, если не менять ситуацию?</h2>
+  <p>
+    Если мусор продолжат выбрасывать в природу, загрязнение будет накапливаться с каждым годом.
+    Реки превратятся в источники опасных бактерий, океаны — в пластиковые свалки,
+    а почва станет непригодной для выращивания продуктов. Животные будут гибнуть,
+    принимая пластик за еду, а микропластик начнёт попадать в организм человека через воду и пищу.
+  </p>
+  <p>
+    Но если люди начнут убирать мусор, сортировать отходы и перерабатывать материалы,
+    экосистемы смогут восстановиться. Чистые реки означают здоровых людей,
+    сохранённые леса — чистый воздух, а ответственное отношение к природе —
+    безопасное будущее для следующих поколений.
+  </p>
+</section>
+
+<section>
+  <h2 data-ru="Мини-игра: Очисти реку и отсортируй мусор" data-en="Mini Game: Clean the River and Sort the Waste">
+    Мини-игра: Очисти реку и отсортируй мусор
+  </h2>
+  <div class="game">
+    <p data-ru="У тебя есть 60 секунд. Сортируй мусор правильно, чтобы спасти реку и планету." 
+       data-en="You have 60 seconds. Sort the waste correctly to save the river and the planet.">
+       У тебя есть 60 секунд. Сортируй мусор правильно, чтобы спасти реку и планету.
+    </p>
+
+    <p><strong data-ru="Время:" data-en="Time:">Время:</strong> <span id="time">60</span> сек | 
+       <strong data-ru="Очки:" data-en="Score:">Очки:</strong> <span id="score">0</span></p>
+
+    <div id="river"></div>
+
+    <div class="bins">
+      <div class="bin" data-type="plastic" data-ru="Пластик" data-en="Plastic">🟡 Пластик</div>
+      <div class="bin" data-type="paper" data-ru="Бумага" data-en="Paper">⚪ Бумага</div>
+      <div class="bin" data-type="metal" data-ru="Металл" data-en="Metal">⚙ Металл</div>
+    </div>
+
+    <div id="endScreen" style="display:none; margin-top:20px;">
+      <h3 id="resultTitle"></h3>
+      <p id="resultText"></p>
+      <button onclick="startGame()">🔄 Начать заново</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 data-ru="Источники информации" data-en="Information Sources">Источники информации</h2>
+  <ul>
+    <li>World Health Organization (WHO) — загрязнение воздуха и здоровье</li>
+    <li>United Nations Environment Programme (UNEP)</li>
+    <li>World Wildlife Fund (WWF)</li>
+    <li>National Geographic — Plastic Pollution</li>
+    <li>Our World in Data — Environmental Pollution Statistics</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Связь со мной:</p>
+  <p>📞 +996 507 049 425</p>
+  <p>Telegram: <a href="https://t.me/HewsTM">@HewsTM</a></p>
+  <p>© 2026 One Planet, One Chance</p>
+</footer>
+
+<script>
+  const river = document.getElementById('river');
+  const scoreEl = document.getElementById('score');
+  const timeEl = document.getElementById('time');
+  const bins = document.querySelectorAll('.bin');
+  const endScreen = document.getElementById('endScreen');
+  const resultTitle = document.getElementById('resultTitle');
+  const resultText = document.getElementById('resultText');
+
+  let score = 0;
+  let time = 60;
+  let gameInterval;
+  let trashInterval;
+  let currentTrash = null;
+
+  function startGame() {
+    score = 0;
+    time = 60;
+    scoreEl.textContent = score;
+    timeEl.textContent = time;
+    river.innerHTML = '';
+    endScreen.style.display = 'none';
+
+    clearInterval(gameInterval);
+    clearInterval(trashInterval);
+
+    trashInterval = setInterval(createTrash, 1200);
+
+    gameInterval = setInterval(() => {
+      time--;
+      timeEl.textContent = time;
+      if (time <= 0) endGame();
+    }, 1000);
+  }
+
+  function endGame() {
+    clearInterval(gameInterval);
+    clearInterval(trashInterval);
+    river.innerHTML = '';
+
+    endScreen.style.display = 'block';
+
+    if (score >= 15) {
+      resultTitle.textContent = '🌍 Ты спас планету!';
+      resultText.textContent = 'Благодаря правильной сортировке река стала чистой, а природа получила шанс на восстановление.';
+    } else {
+      resultTitle.textContent = '⚠ Планета в опасности';
+      resultText.textContent = 'Мусора осталось слишком много. Попробуй ещё раз и помоги природе.';
+    }
+  }
+
+  function createTrash() {
+    const trash = document.createElement('div');
+    const types = ['plastic', 'paper', 'metal'];
+    const type = types[Math.floor(Math.random() * types.length)];
+
+    trash.className = `trash ${type}`;
+    trash.dataset.type = type;
+    trash.textContent = type === 'plastic' ? '🥤' : type === 'paper' ? '📄' : '🥫';
+    trash.style.left = Math.random() * 85 + '%';
+    trash.style.top = Math.random() * 140 + 'px';
+    trash.draggable = true;
+
+    trash.addEventListener('dragstart', () => currentTrash = trash);
+
+    river.appendChild(trash);
+
+    setTimeout(() => {
+      if (trash.parentElement) trash.remove();
+    }, 9000);
+  }
+
+  bins.forEach(bin => {
+    bin.addEventListener('dragover', e => e.preventDefault());
+    bin.addEventListener('drop', () => {
+      if (!currentTrash) return;
+
+      if (currentTrash.dataset.type === bin.dataset.type) {
+        score++;
+        scoreEl.textContent = score;
+      }
+      currentTrash.remove();
+      currentTrash = null;
+    });
+  });
+
+  function setLang(lang) {
+    document.querySelectorAll('[data-ru]').forEach(el => {
+      el.textContent = el.getAttribute('data-' + lang);
+    });
+  }
+
+  startGame();
+</script>
+
+</body>
+</html>
